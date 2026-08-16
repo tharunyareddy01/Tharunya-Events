@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Tharunya Events</title>
+
+<!-- Google Fonts -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<style>
+
+    .gallery-section {
+        padding: 40px;
+    }
+
+    .gallery-intro {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .gallery-intro h2 {
+        font-family: "Playfair Display", serif;
+        color: #754052;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .gallery-intro p {
+        color: #666;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .gallery-item {
+        position: relative;
+        height: 280px;
+        overflow: hidden;
+        border-radius: 20px;
+        background: #fff8f8;
+        box-shadow: 0 5px 20px rgba(120, 80, 90, 0.15);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: 0.4s;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.08);
+    }
+
+    .gallery-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 25px 20px 20px;
+        background: linear-gradient(
+            transparent,
+            rgba(70, 35, 45, 0.85)
+        );
+        color: white;
+        transform: translateY(100%);
+        transition: 0.4s;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+    }
+
+    .gallery-overlay h3 {
+        font-family: "Playfair Display", serif;
+        margin: 0 0 5px;
+        font-size: 21px;
+    }
+
+    .gallery-overlay p {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .gallery-cta {
+        margin: 45px 40px;
+        padding: 45px;
+        text-align: center;
+        border-radius: 25px;
+        background: #ead1d8;
+    }
+
+    .gallery-cta h2 {
+        font-family: "Playfair Display", serif;
+        color: #754052;
+        margin-bottom: 10px;
+    }
+
+    .gallery-cta p {
+        color: #555;
+        margin-bottom: 25px;
+    }
+
+    @media (max-width: 900px) {
+
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        .gallery-section {
+            padding: 20px;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-item {
+            height: 260px;
+        }
+
+        .gallery-cta {
+            margin: 30px 20px;
+            padding: 30px 20px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <img src="images/logo.jpg" alt="Logo">
+
+        <h2>Tharunya</h2>
+        <span>Events</span>
+
+    </div>
+
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i> Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    <i class="fa-solid fa-heart"></i> About
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    <i class="fa-solid fa-champagne-glasses"></i> Services
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="gallery.html">
+                    <i class="fa-solid fa-camera"></i> Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="booking.html">
+                    <i class="fa-solid fa-calendar-days"></i> Book Event
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    <i class="fa-solid fa-envelope"></i> Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <div class="social-icons">
+
+        <a href="#">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-pinterest"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- Main Content -->
+
+<main class="main-content">
+
+
+    <!-- Banner -->
+
+    <section class="page-banner">
+
+        <h1>Our Gallery</h1>
+
+        <p>
+            A glimpse of the beautiful celebrations
+            created by Tharunya Events.
+        </p>
+
+    </section>
+
+
+    <!-- Gallery -->
+
+    <section class="gallery-section">
+
+        <div class="gallery-intro">
+
+            <h2>Memories We Create</h2>
+
+            <p>
+                Explore some of our beautiful event decorations
+                and unforgettable celebrations.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <!-- Wedding -->
+
+            <div class="gallery-item">
+
+                <img src="images/wedding.jpg"
+                    alt="Wedding Event">
+
+                <div class="gallery-overlay">
+
+                    <h3>Wedding Celebration</h3>
+
+                    <p>Elegant wedding decoration</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Wedding -->
+
+            <div class="gallery-item">
+
+                <img src="images/wedding1.jpg"
+                    alt="Wedding Decoration">
+
+                <div class="gallery-overlay">
+
+                    <h3>Wedding Decor</h3>
+
+                    <p>Beautiful floral arrangements</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Birthday -->
+
+            <div class="gallery-item">
+
+                <img src="images/birthday.jpg"
+                    alt="Birthday Party">
+
+                <div class="gallery-overlay">
+
+                    <h3>Birthday Party</h3>
+
+                    <p>Fun and colorful birthday setup</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Birthday -->
+
+            <div class="gallery-item">
+
+                <img src="images/anniversery.jpg"
+                    alt="Birthday Decoration">
+
+                <div class="gallery-overlay">
+
+                    <h3>Anniversery Celebrations</h3>
+
+                    <p>Creative themed decorations</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Engagement -->
+
+            <div class="gallery-item">
+
+                <img src="images/engagement.jpg"
+                    alt="Engagement Event">
+
+                <div class="gallery-overlay">
+
+                    <h3>Engagement</h3>
+
+                    <p>Romantic engagement setup</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Baby Shower -->
+
+            <div class="gallery-item">
+
+                <img src="images/babyshower.jpg"
+                    alt="Baby Shower">
+
+                <div class="gallery-overlay">
+
+                    <h3>Baby Shower</h3>
+
+                    <p>Sweet pastel themed celebration</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Decoration -->
+
+            <div class="gallery-item">
+
+                <img src="images/corporate.jpg"
+                    alt="Event Decoration">
+
+                <div class="gallery-overlay">
+
+                    <h3>Event Decoration</h3>
+
+                    <p>Customized event decoration</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Stage -->
+
+            <div class="gallery-item">
+
+                <img src="images/decoration.jpg"
+                    alt="Stage Decoration">
+
+                <div class="gallery-overlay">
+
+                    <h3>Stage Decoration</h3>
+
+                    <p>Elegant stage setup</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Corporate -->
+
+            <div class="gallery-item">
+
+                <img src="images/corporate1.jpg"
+                    alt="Corporate Event">
+
+                <div class="gallery-overlay">
+
+                    <h3>Corporate Event</h3>
+
+                    <p>Professional event arrangements</p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="gallery-cta">
+
+        <h2>Love What You See?</h2>
+
+        <p>
+            Let us create a beautiful celebration
+            specially designed for you.
+        </p>
+
+        <a href="booking.html" class="btn1">
+            Book Your Event
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h2>Tharunya Events</h2>
+
+        <p>Crafting Unforgettable Celebrations</p>
+
+        <p>
+            © 2026 Tharunya Events. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</main>
+```
+
+</body>
+
+</html>

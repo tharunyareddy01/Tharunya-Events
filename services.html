@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Team | Tharunya Events</title>
+
+<!-- Google Fonts -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<style>
+
+    /* Team Section */
+
+    .team-section {
+        padding: 45px 40px;
+    }
+
+    .team-intro {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 40px;
+    }
+
+    .team-intro h2 {
+        font-family: "Playfair Display", serif;
+        color: #754052;
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .team-intro p {
+        color: #666;
+        line-height: 1.7;
+    }
+
+
+    /* Team Grid */
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+
+    /* Team Card */
+
+    .team-card {
+        background: #fff8f8;
+        border-radius: 25px;
+        padding: 25px 20px 30px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(120, 80, 90, 0.12);
+        transition: 0.4s;
+        border: 1px solid #f1dfe4;
+    }
+
+    .team-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(120, 80, 90, 0.20);
+    }
+
+
+    /* Team Image */
+
+    /* .team-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        padding: 6px;
+        background: #ead1d8;
+    }
+
+    .team-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+    } */
+     .team-image {
+    width: 190px;
+    height: 210px;
+    margin: 0 auto 20px;
+    padding: 0;
+    background: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+}
+
+
+    /* Name */
+
+    .team-card h3 {
+        font-family: "Playfair Display", serif;
+        color: #754052;
+        font-size: 22px;
+        margin: 10px 0 5px;
+    }
+
+
+    /* Role */
+
+    .team-role {
+        color: #b06d82;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+
+
+    /* Description */
+
+    .team-card p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+
+
+    /* Social Icons */
+
+    .team-social {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .team-social a {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #ead1d8;
+        color: #754052;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .team-social a:hover {
+        background: #754052;
+        color: white;
+        transform: scale(1.1);
+    }
+
+
+    /* Bottom Section */
+
+    .team-message {
+        margin: 50px 40px;
+        padding: 45px;
+        border-radius: 25px;
+        text-align: center;
+        background: linear-gradient(
+            135deg,
+            #ead1d8,
+            #f7e8eb
+        );
+    }
+
+    .team-message h2 {
+        font-family: "Playfair Display", serif;
+        color: #754052;
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .team-message p {
+        color: #555;
+        max-width: 650px;
+        margin: 0 auto 25px;
+        line-height: 1.7;
+    }
+
+
+    /* Tablet */
+
+    @media (max-width: 1000px) {
+
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+
+    /* Mobile */
+
+    /* @media (max-width: 600px) {
+
+        .team-section {
+            padding: 25px 20px;
+        }
+
+        .team-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .team-image {
+            width: 200px;
+            height: 200px;
+        }
+
+        .team-message {
+            margin: 30px 20px;
+            padding: 30px 20px;
+        }
+
+    } */
+     @media (max-width: 600px) {
+
+    .team-section {
+        padding: 25px 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-image {
+        width: 180px;
+        height: 200px;
+    }
+
+    .team-message {
+        margin: 30px 20px;
+        padding: 30px 20px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <img src="images/logo.jpg" alt="Logo">
+
+        <h2>Tharunya</h2>
+        <span>Events</span>
+
+    </div>
+
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i> Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    <i class="fa-solid fa-heart"></i> About
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    <i class="fa-solid fa-champagne-glasses"></i> Services
+                </a>
+            </li>
+
+            <li>
+                <a href="gallery.html">
+                    <i class="fa-solid fa-camera"></i> Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="booking.html">
+                    <i class="fa-solid fa-calendar-days"></i> Book Event
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    <i class="fa-solid fa-envelope"></i> Contact
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="team.html">
+                    <i class="fa-solid fa-users"></i> Our Team
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <div class="social-icons">
+
+        <a href="#">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-pinterest"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- Main Content -->
+
+<main class="main-content">
+
+
+    <!-- Banner -->
+
+    <section class="page-banner">
+
+        <h1>Meet Our Team</h1>
+
+        <p>
+            The creative people behind every beautiful
+            celebration at Tharunya Events.
+        </p>
+
+    </section>
+
+
+    <!-- Team -->
+
+    <section class="team-section">
+
+
+        <div class="team-intro">
+
+            <h2>The People Behind The Magic</h2>
+
+            <p>
+                Our team works together with creativity,
+                dedication and passion to make every event
+                special and memorable.
+            </p>
+
+        </div>
+
+
+        <div class="team-grid">
+
+
+            <!-- Team Member 1 -->
+
+            <div class="team-card">
+
+                <div class="team-image">
+
+                    <img src="images/tharunya.jpeg"
+                         alt="Tharunya">
+
+                </div>
+
+                <h3>Tharunya</h3>
+
+                <div class="team-role">
+                    Founder & Event Planner
+                </div>
+
+                <p>
+                    Handles event planning and ensures every
+                    celebration is organized beautifully.
+                </p>
+
+                <div class="team-social">
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Team Member 2 -->
+
+            <div class="team-card">
+
+                <div class="team-image">
+
+                    <img src="images/tejaswi.jpeg"
+                         alt="Team Member">
+
+                </div>
+
+                <h3>Tejaswi</h3>
+
+                <div class="team-role">
+                    Creative Designer
+                </div>
+
+                <p>
+                    Creates beautiful themes, concepts and
+                    decoration ideas for every occasion.
+                </p>
+
+                <div class="team-social">
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Team Member 3 -->
+
+            <div class="team-card">
+
+                <div class="team-image">
+
+                    <img src="images/sony.jpeg"
+                         alt="Team Member">
+
+                </div>
+
+                <h3>Sony</h3>
+
+                <div class="team-role">
+                    Decoration Manager
+                </div>
+
+                <p>
+                    Manages decorations, floral arrangements
+                    and event setup.
+                </p>
+
+                <div class="team-social">
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Team Member 4 -->
+
+            <div class="team-card">
+
+                <div class="team-image">
+
+                    <img src="images/harshini.jpeg"
+                         alt="Team Member">
+
+                </div>
+
+                <h3>Harshini</h3>
+
+                <div class="team-role">
+                    Event Coordinator
+                </div>
+
+                <p>
+                    Coordinates vendors, schedules and event
+                    activities to keep everything running smoothly.
+                </p>
+
+                <div class="team-social">
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Team Message -->
+
+    <section class="team-message">
+
+        <h2>We Create Memories Together</h2>
+
+        <p>
+            From the first idea to the final celebration,
+            our team works together to bring your dream
+            event to life.
+        </p>
+
+        <a href="booking.html" class="btn1">
+            Plan Your Event
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h2>Tharunya Events</h2>
+
+        <p>Crafting Unforgettable Celebrations</p>
+
+        <p>
+            © 2026 Tharunya Events. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</main>
+<!-- Welcome Confetti -->
+<div id="confetti-container"></div>
+
+
+
+</body>
+
+</html>

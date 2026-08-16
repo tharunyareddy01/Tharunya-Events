@@ -1,0 +1,317 @@
+/*==============================
+FADE IN
+==============================*/
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.hero-left{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.hero-right{
+
+    animation:fadeUp 1.6s ease;
+
+}
+
+/*==============================
+FLOATING IMAGE
+==============================*/
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.hero-right img{
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+/*==============================
+BUTTON GLOW
+==============================*/
+
+@keyframes glow{
+
+    0%{
+        box-shadow:0 0 8px rgba(216,167,177,.3);
+    }
+
+    50%{
+        box-shadow:
+        0 0 25px rgba(216,167,177,.6),
+        0 0 40px rgba(216,167,177,.4);
+    }
+
+    100%{
+        box-shadow:0 0 8px rgba(216,167,177,.3);
+    }
+
+}
+
+.btn1{
+
+    animation:glow 3s infinite;
+
+}
+
+/*==============================
+CARD HOVER
+==============================*/
+
+.card{
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px) scale(1.03);
+
+    box-shadow:
+    0 20px 40px rgba(220,180,190,.35);
+
+}
+
+/*==============================
+GALLERY IMAGE
+==============================*/
+
+.gallery-grid img{
+
+    transition:.5s;
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.08);
+
+}
+
+/*==============================
+SIDEBAR ICON
+==============================*/
+
+.social-icons a{
+
+    transition:.4s;
+
+}
+
+.social-icons a:hover{
+
+    transform:translateY(-8px) rotate(10deg);
+
+}
+
+/*==============================
+HEADING ANIMATION
+==============================*/
+
+@keyframes titleGlow{
+
+    0%{
+        text-shadow:none;
+    }
+
+    50%{
+        text-shadow:
+        0 0 10px #F6C8D5,
+        0 0 20px #F3D6E2;
+    }
+
+    100%{
+        text-shadow:none;
+    }
+
+}
+
+.hero h1{
+
+    animation:titleGlow 4s infinite;
+
+}
+
+/*==============================
+BACKGROUND BLOBS
+==============================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:#F8D7DA;
+
+    filter:blur(120px);
+
+    opacity:.35;
+
+    top:-120px;
+    right:-120px;
+
+    z-index:-1;
+
+    animation:blob1 10s infinite alternate;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    background:#DCC6E0;
+
+    filter:blur(120px);
+
+    opacity:.35;
+
+    bottom:-120px;
+    left:-120px;
+
+    z-index:-1;
+
+    animation:blob2 12s infinite alternate;
+
+}
+
+@keyframes blob1{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(70px);
+    }
+
+}
+
+@keyframes blob2{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(70px);
+    }
+
+}
+
+/*==============================
+SECTION FADE
+==============================*/
+
+section{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+/*==============================
+SCROLLBAR
+==============================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#FFF5F5;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#D8A7B1;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#C48D99;
+
+}
+
+/*==============================
+HOVER UNDERLINE
+==============================*/
+
+nav ul li a{
+
+    position:relative;
+
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:18px;
+    bottom:8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#D59BAA;
+
+    transition:.4s;
+
+}
+
+nav ul li a:hover::after{
+
+    width:65%;
+
+}
